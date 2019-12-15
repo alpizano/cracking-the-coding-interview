@@ -6,7 +6,7 @@ I feel creating the repository and pushing my progress to the remote repo aids i
 
 ## isUnique
 Implementing an algorithm to see if a string contains all unique characters.
-### HashTable implementation
+#### HashTable implementation
 https://github.com/alpizano/cracking-the-coding-interview/blob/master/UniqueString/src/main/java/me/alpizano/HashTableImplementation.java
 
-### BitVector implementation
+#### BitVector implementation
