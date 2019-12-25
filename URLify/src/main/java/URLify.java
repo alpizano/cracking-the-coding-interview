@@ -1,10 +1,20 @@
+import java.util.regex.*;
+
 public class URLify {
 
     public static void URLify(String str, int length) {
+        Pattern p = Pattern.compile("[a-zA-Z_0-9]");
+
         char[] charArray = str.toCharArray();
 
-        for(int i=0; i<charArray.length; i++) {
-            System.out.println(charArray[i]);
+        int arr_placeholder = length-1;
+        int char_placeholder = 0;
+
+        for(int i=charArray.length-1; i>=0; i--) {
+            if(Pattern.matches(Character.toString(charArray[i]),"[a-zA-Z_0-9]")) {
+                //char_placeholder = i;
+                System.out.println("Hello");
+            }
         }
 
 
