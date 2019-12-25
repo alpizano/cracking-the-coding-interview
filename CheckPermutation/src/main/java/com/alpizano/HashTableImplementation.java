@@ -1,8 +1,6 @@
 package com.alpizano;
 
-
 import java.util.Hashtable;
-
 
 public class HashTableImplementation {
     public static boolean checkPermutation(String str1, String str2) {
@@ -18,17 +16,14 @@ public class HashTableImplementation {
                 table.put(str1.charAt(i), i);
             }
 
-
-
         for(int j=0; j < str2.length(); j++) {
             if(!table.containsKey(str2.charAt(j))) {
                 return false;
             }
         }
-
         return true;
-
     }
+
     public static void main(String[] args) {
         String str1 = "abcdefg";
         String str2= "gfedcba";
