@@ -2,17 +2,37 @@ import java.util.Hashtable;
 
 public class Test {
 
-    public static void removeDups(Node list) {
-        Hashtable<Integer,String> table = new Hashtable();
 
-        for(Node cursor = list; cursor != null; cursor = cursor.next) {
+    public static void removeDups(Node list) {
+        Hashtable<Integer,Integer> table = new Hashtable();
+
+        int counter = 0;
+        Node prevCursor = list;
+        table.put(prevCursor.data,1);
+
+        for(Node cursor = list.next; cursor != null; cursor = cursor.next) {
+            System.out.println();
+            System.out.println("prev cursor: " + prevCursor.data + " , after cursor: "+ cursor.data);
+
             if (table.size() > 0) {
-                if(table.containsKey())
-                table.put(1,Integer.toString(cursor.data));
+                if(table.containsKey(cursor.data)) {
+                    if(cursor.next != null) {
+
+                        prevCursor.removeNodeAfter();
+                        cursor = prevCursor;
+                        continue;
+                    }
+                    else {
+                        prevCursor.removeNodeAtEnd();
+                    }
+                }
             }
+
+            table.put(cursor.data,1);
+            prevCursor = prevCursor.next;
+            counter++;
         }
     }
-
 
         public static void main(String[] args) {
         // Create linked list 1 -> 5 -> 1 -> 7 -> 3 -> 3 -> 9
@@ -24,12 +44,22 @@ public class Test {
             head.appendToTail(3);
             head.appendToTail(3);
             head.appendToTail(9);
+            head.appendToTail(8);
+            head.appendToTail(7);
 
             for(Node cursor = head; cursor != null; cursor = cursor.next) {
-                System.out.println(cursor.data);
+                System.out.print(cursor.data + " ");
             }
+            //System.out.println(head.next.data);
 
             Test test = new Test();
             test.removeDups(head);
+
+            //head.next = head.next.next;
+
+            for(Node cursor = head; cursor != null; cursor = cursor.next) {
+                System.out.print(cursor.data + " ");
+            }
+
         }
 }

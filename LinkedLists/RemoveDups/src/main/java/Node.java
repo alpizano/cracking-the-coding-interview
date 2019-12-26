@@ -14,6 +14,13 @@ public class Node {
         }
 
         n.next = end;
+    }
 
+    public void removeNodeAfter() {
+        next = next.next;
+    }
+
+    public void removeNodeAtEnd() {
+        next = null;
     }
 }
