@@ -1,10 +1,20 @@
 public class Test {
-    public void kthToLast(Node list, int k) {
+    public int kthToLast(Node list, int k) {
         int counter = 0;
+        int val = 0;
 
         for(Node cursor = list; cursor != null; cursor = cursor.next) {
-
+            counter++;
         }
+        
+        int kth = counter - k;
+
+        Node cursor = list;
+        for(int i=0; i<= kth; i++) {
+            val = cursor.data;
+            cursor = cursor.next;
+        }
+        return val;
 
     }
     public static void main(String[] args) {
@@ -17,7 +27,7 @@ public class Test {
         head.appendToTail(11);
 
         Test test = new Test();
-        test.kthToLast(head, 3);
+        System.out.println(test.kthToLast(head, 5));
 
     }
 }
