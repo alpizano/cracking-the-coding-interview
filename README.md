@@ -4,6 +4,8 @@ I will be devising my own solutions/algorithms to various questions in the "Crac
 
 I feel creating the repository and pushing my progress to the remote repo aids in staying consistent, is doing many algorithmic-type leetcode style problems can be very draining for some and the progress can halt fast if there isn't enough stimulation. Thanks for checking out this repository!
 
+There project structure is in Maven format, so all the source code can be found in src/main/java directory.
+
 ## isUnique
 Implementing an algorithm to see if a string contains all unique characters.
 #### HashTable implementation
