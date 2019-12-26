@@ -3,15 +3,12 @@ import java.util.regex.*;
 public class URLify {
 
     public static String URLify(String str, int length) {
-        Pattern p = Pattern.compile("[a-zA-Z_0-9]");
-
         char[] charArray = str.toCharArray();
 
         int first_char = length-1;
         int arr_pointer = charArray.length-1;
 
         for(int i=first_char; i>=0; i--) {
-            // use true length-1 to find first non-space (char) going reverse
 
             // move first char to end of char array
             if(Character.toString(charArray[i]).matches("[a-zA-Z_0-9]+")) {
@@ -31,12 +28,10 @@ public class URLify {
                 arr_pointer--;
             }
         }
-
         return String.valueOf(charArray);
     }
     public static void main(String[] args) {
         String str1 = "Mr John Smith    ";
-        //String str2 = "  Mr%20John%20Smith";
 
         URLify test = new URLify();
        String ret_str =  test.URLify(str1,13);
