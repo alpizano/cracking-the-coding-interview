@@ -3,14 +3,14 @@ import java.util.Hashtable;
 public class Test {
 
 
-    public static void removeDups(Node list) {
+    public static void removeDups(Node head) {
         Hashtable<Integer,Integer> table = new Hashtable();
 
         int counter = 0;
-        Node prevCursor = list;
+        Node prevCursor = head;
         table.put(prevCursor.data,1);
 
-        for(Node cursor = list.next; cursor != null; cursor = cursor.next) {
+        for(Node cursor = head.next; cursor != null; cursor = cursor.next) {
             System.out.println();
             System.out.println("prev cursor: " + prevCursor.data + " , after cursor: "+ cursor.data);
 
@@ -18,7 +18,8 @@ public class Test {
                 if(table.containsKey(cursor.data)) {
                     if(cursor.next != null) {
 
-                        prevCursor.removeNodeAfter();
+                        //prevCursor.removeNodeAfter();
+                        //prevCursor.next = prevCursor.next.next;
                         cursor = prevCursor;
                         continue;
                     }

@@ -6,7 +6,7 @@ public class Test {
         for(Node cursor = list; cursor != null; cursor = cursor.next) {
             counter++;
         }
-        
+
         int kth = counter - k;
 
         Node cursor = list;
