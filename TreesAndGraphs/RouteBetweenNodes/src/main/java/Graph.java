@@ -71,4 +71,24 @@ public class Graph<E> implements Cloneable {
 
         return answer;
     }
+
+    public static <E> void depthFirstPrint(Graph<E> g, int start) {
+        boolean[] marked = new boolean[g.size()];
+        depthFirstRecurse(g, start, marked);
+    }
+
+    public static <E> void depthFirstRecurse(Graph<E> g, int v, boolean[] marked) {
+        int[] connections = g.neighbors(v);
+        int i;
+
+        marked[v] = true;
+        System.out.println(g.getLabel(v));
+
+        // Traverse all the neighbors, looking for unmarked vertices:
+        for(int nextNeighbor : connections) {
+            if(!marked[nextNeighbor]) {
+                depthFirstRecurse(g, nextNeighbor, marked);
+            }
+        }
+    }
 }
