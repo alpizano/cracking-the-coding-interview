@@ -1,10 +1,9 @@
 public class RoutesBetweenNodes {
 
     public static void main (String[] args) {
-        System.out.println("Hello world");
-
         Graph<String> t = new Graph<String>(7);
 
+        // create the graph here
         t.setLabel(0, "v0"); // Provides vertex number 0 with label of "v0"
         t.setLabel(1, "v1"); // Provides vertex number 1 with label of "v1"
         t.setLabel(2, "v2"); // Provides vertex number 1 with label of "v2"
@@ -13,6 +12,8 @@ public class RoutesBetweenNodes {
         t.setLabel(5, "v5"); // Provides vertex number 1 with label of "v5"
         t.setLabel(6, "v6"); // Provides vertex number 1 with label of "v6"
 
+        // *BFS: should return 0, 1, 3, 4, 5, 6 *vertex 2 never hit from entry vertex 0
+        // *DFS: should return 0, 1, 3, 5, 6, 4 *vertex 2 never hit from entry vertex 0
         t.addEdge(0,1); // Adds an edge from vertex 1 to vertex 0
         t.addEdge(1,3); // Adds an edge from vertex 1 to vertex 0
         t.addEdge(3,0); // Adds an edge from vertex 1 to vertex 0
