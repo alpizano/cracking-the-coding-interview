@@ -16,6 +16,7 @@ space compleity: O(1)
 
 #### HashTable implementation
 In this implementation, I utilize a Hash table datastructure to act as a "memory" system to recall if the string has a character that has been seen before, resulting in the string not being unique. We iterature through the string, and store each character into a hash table at every iteration (except the first, because they can be no stored characters before the 1st iteration). At every iteration, we then call the **containsKey()**  method on the hash table, to see if the hash table contains the current character we are currently iterating over.
+
 https://github.com/alpizano/cracking-the-coding-interview/blob/master/UniqueString/src/main/java/me/alpizano/HashTableImplementation.java
 
 #### BitVector implementation
