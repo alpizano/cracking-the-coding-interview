@@ -12,6 +12,7 @@ public class RoutesBetweenNodes {
         t.setLabel(4, "v4"); // Provides vertex number 1 with label of "v4"
         t.setLabel(5, "v5"); // Provides vertex number 1 with label of "v5"
         t.setLabel(6, "v6"); // Provides vertex number 1 with label of "v6"
+
         t.addEdge(0,1); // Adds an edge from vertex 1 to vertex 0
         t.addEdge(1,3); // Adds an edge from vertex 1 to vertex 0
         t.addEdge(3,0); // Adds an edge from vertex 1 to vertex 0
@@ -21,8 +22,6 @@ public class RoutesBetweenNodes {
         t.addEdge(3,6); // Adds an edge from vertex 1 to vertex 0
         t.addEdge(3,5); // Adds an edge from vertex 1 to vertex 0
 
-
-
-        System.out.println(t.getLabel(0));
+        Graph.depthFirstPrint(t,0);
     }
 }
