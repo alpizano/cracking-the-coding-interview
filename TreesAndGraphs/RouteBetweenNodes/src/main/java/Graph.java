@@ -4,6 +4,7 @@ public class Graph<E> implements Cloneable {
     private Object[] labels;
 
     public Graph(int n) {
+        // using an adjacency matrix
         edges = new boolean[n][n];
         labels = new Object[n];
     }
@@ -37,7 +38,6 @@ public class Graph<E> implements Cloneable {
     public E getLabel(int vertex) {
         return (E) labels[vertex];
     }
-
 
     public void setLabel(int vertex, E newLabel) {
         labels[vertex] = newLabel;
