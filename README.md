@@ -19,10 +19,12 @@ In this implementation, I utilize a Hash table datastructure to act as a "memory
 
 https://github.com/alpizano/cracking-the-coding-interview/blob/master/UniqueString/src/main/java/me/alpizano/HashTableImplementation.java
 
+
 #### BitVector implementation
 Likewise, a bit vector can be implemented to reduce space usage by a factor of 8. The assumption that only the 26 characters of a -z (lowercase) will be used.
 
 https://github.com/alpizano/cracking-the-coding-interview/blob/master/ArraysAndStrings/IsUnique/src/main/java/me/alpizano/BitVectorImplementation.java
+
 
 ### CheckPermutation
 **Task:** Given two strings, write a method to decide if one is a permutation of the other.
@@ -45,6 +47,7 @@ time complexity:
 space complexity: 
 
 https://github.com/alpizano/cracking-the-coding-interview/tree/master/LinkedLists/KthToLast/src/main/java
+
 
 ### Remove Dups
 time complexity: 
