@@ -1,12 +1,12 @@
 public class Graph<E> implements Cloneable {
-    // n x n 2-dimensional array
+    // Adjacency matrix. n x n 2-dimensional array
     private boolean edges[][];
+    // 1-D array of the vertices and their corresponding label (any data type, generic)
     private Object[] labels;
 
     public Graph(int n) {
-        // using an adjacency matrix
         edges = new boolean[n][n];
-        labels = new Object[n];
+        labels = (E[]) new Object[n];
     }
 
     public Graph<E> clone() {
@@ -52,23 +52,26 @@ public class Graph<E> implements Cloneable {
         int count;
         int[] answer;
 
-        // First count how many edges have the vertex as their source
+        // Iterate thru row containing vertex of adjacency matrix to find where vertex points to other node (neighbor)
         count = 0;
         for(i=0; i < labels.length; i++) {
             if (edges[vertex][i])
                 count++;
         }
 
-        // Allocate the array for the answer
+        //  Create the new edge list array based on size found in previous for loop
         answer = new int[count];
 
-        // Fill the array for the answer
+        /***
+         * The edge list will be provided as an array of integers that contains all of the
+         * vertex numbers for the targets of edges that start at a specified source
+         */
         count = 0;
         for (i = 0; i < labels.length; i++) {
+            // if vertex points to node == true, then it is a neighbor
             if(edges[vertex][i])
-                answer[count++] = i;
+                answer[count++] = i; // i is the node that the vertex points to
         }
-
         return answer;
     }
 
@@ -79,8 +82,8 @@ public class Graph<E> implements Cloneable {
 
     public static <E> void depthFirstRecurse(Graph<E> g, int v, boolean[] marked) {
         int[] connections = g.neighbors(v);
-        int i;
 
+        // mark the visit vertex in the 1-D array as "1" or true
         marked[v] = true;
         System.out.println(g.getLabel(v));
 
