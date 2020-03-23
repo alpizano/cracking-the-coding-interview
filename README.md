@@ -31,12 +31,27 @@ time complexity:
 
 space complexity: 
 
-### Using the java standard library Collection and List Interface
+#### Using the java standard library Collection and List Interface
 In this implementation, I utilize the Collections framework in Java and utilize the List interface, instantiated on the concrete ArrayList list class, that allows for dyamic resizing. Because we are checking permutations, that is order matters, we can can first check if both strings are the same length. If not, we can instantly return false as we know these strings cannot be permutations because they have a different set length of characters. Else, we can continue to iterate through each string and add each character to a List.
 
 We can then easily **sort** both lists using the Collections class and call the **equals** method to determine if they are permutations!
 
 https://github.com/alpizano/cracking-the-coding-interview/blob/master/ArraysAndStrings/CheckPermutation/src/main/java/com/alpizano/SortingComparisonImplementation.java
+
+# Linked Lists
+## Return Kth to Last
+time complexity: 
+
+space complexity: 
+
+https://github.com/alpizano/cracking-the-coding-interview/tree/master/LinkedLists/KthToLast/src/main/java
+
+## Remove Dups
+time complexity: 
+
+space complexity: 
+https://github.com/alpizano/cracking-the-coding-interview/tree/master/LinkedLists/RemoveDups/src/main/java
+
 
 # Trees And Graphs
 ## Route Between Nodes
@@ -46,3 +61,5 @@ time complexity:
 
 space complexity: 
 #### Depth-First Search implementation
+
+https://github.com/alpizano/cracking-the-coding-interview/tree/master/TreesAndGraphs/RouteBetweenNodes/src/main/java
