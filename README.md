@@ -7,7 +7,7 @@ I feel creating the repository and pushing my progress to the remote repo aids i
 There project structure is in Maven format, so all the source code can be found in src/main/java directory.
 
 # Arrays and Strings
-## isUnique
+### isUnique
 **Task:** Implement an algorithm to determine if a string has all unique characters. What if you cannot use additional data structures?
 
 time complexity: O(N)
@@ -24,7 +24,7 @@ Likewise, a bit vector can be implemented to reduce space usage by a factor of 8
 
 https://github.com/alpizano/cracking-the-coding-interview/blob/master/ArraysAndStrings/IsUnique/src/main/java/me/alpizano/BitVectorImplementation.java
 
-## CheckPermutation
+### CheckPermutation
 **Task:** Given two strings, write a method to decide if one is a permutation of the other.
 
 time complexity: 
@@ -39,14 +39,14 @@ We can then easily **sort** both lists using the Collections class and call the 
 https://github.com/alpizano/cracking-the-coding-interview/blob/master/ArraysAndStrings/CheckPermutation/src/main/java/com/alpizano/SortingComparisonImplementation.java
 
 # Linked Lists
-## Return Kth to Last
+### Return Kth to Last
 time complexity: 
 
 space complexity: 
 
 https://github.com/alpizano/cracking-the-coding-interview/tree/master/LinkedLists/KthToLast/src/main/java
 
-## Remove Dups
+### Remove Dups
 time complexity: 
 
 space complexity: 
@@ -54,7 +54,7 @@ https://github.com/alpizano/cracking-the-coding-interview/tree/master/LinkedList
 
 
 # Trees And Graphs
-## Route Between Nodes
+### Route Between Nodes
 **Task:** Given a directed graph, design an algorithm to find out whether there is a router betwee two nodes.
 
 time complexity: 
