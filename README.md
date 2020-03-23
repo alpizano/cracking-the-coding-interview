@@ -1,6 +1,6 @@
 # Cracking the Coding Interview
 ## Interview Questions
-I will be devising my own solutions/algorithms to various questions in the "Cracking the Coding Interview" book by Gayle Laakman. Yes, there is a solutions page however, my approach will be to code from scratch avoiding the solutions until many hours have passed (or I become frustrated enough :stuck_out_tongue_winking_eye:)
+I will be devising my own solutions/algorithms to various questions in the "Cracking the Coding Interview" book by Gayle Laakmann McDowell. Yes, there is a solutions page however, my approach will be to code from scratch avoiding the solutions until many hours have passed (or I become frustrated enough :stuck_out_tongue_winking_eye:)
 
 I feel creating the repository and pushing my progress to the remote repo aids in staying consistent, is doing many algorithmic-type leetcode style problems can be very draining for some and the progress can halt fast if there isn't enough stimulation. Thanks for checking out this repository!
 
@@ -37,3 +37,12 @@ In this implementation, I utilize the Collections framework in Java and utilize 
 We can then easily **sort** both lists using the Collections class and call the **equals** method to determine if they are permutations!
 
 https://github.com/alpizano/cracking-the-coding-interview/blob/master/ArraysAndStrings/CheckPermutation/src/main/java/com/alpizano/SortingComparisonImplementation.java
+
+# Trees And Graphs
+## Route Between Nodes
+**Task:** Given a directed graph, design an algorithm to find out whether there is a router betwee two nodes.
+
+time complexity: 
+
+space complexity: 
+#### Depth-First Search implementation
