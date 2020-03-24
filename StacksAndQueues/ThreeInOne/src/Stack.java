@@ -3,20 +3,24 @@
 public class Stack<E> {
     Object[] stack;
     int numOfStacks = 3;
-    int size;
-    int start;
-    int end;
     int divisions;
-    int s1Pointer;
-    int s2Pointer;
-    int s3Pointer;
+    int s1;
+    int s1_top;
+    int s2;
+    int s2_top;
+    int s3;
+    int s3_top;
 
     public Stack(int stackSize) {
         stack = new Object[stackSize];
-        start = 0;
-        end = stack.length-1;
-        size = stack.length;
-        divisions = size/numOfStacks;
+        divisions = stack.length/numOfStacks;
+        s1 = 0;
+        s1_top = divisions-1;
+        s2 = divisions;
+        s2_top = divisions*2-1;
+        s3 = divisions*2;
+        s3_top = stack.length-1;
+
     }
 
     // pop()
@@ -29,39 +33,27 @@ public class Stack<E> {
         int upperLimit;
 
         if(stackNumber == 1) {
-            lowerLimit = start;
-            upperLimit = divisions-1;
-            s1Pointer = start;
-
-            if(s1Pointer <= upperLimit) {
-                stack[s1Pointer] = value;
-                s1Pointer++;
+            if(s1 <= s1_top) {
+                stack[s1] = value;
+                s1++;
             }
             else {
                 System.out.println("Stack 1 is too small!");
             }
         }
         else if(stackNumber == 2) {
-            lowerLimit = divisions;
-            upperLimit = divisions*2-1;
-            s2Pointer = divisions;
-
-            if(s2Pointer <= upperLimit) {
-                stack[s2Pointer] = value;
-                s2Pointer++;
+            if(s2 <= s2_top) {
+                stack[s2] = value;
+                s2++;
             }
             else {
                 System.out.println("Stack 2 is too small!");
             }
         }
         else {
-            lowerLimit = divisions*2;
-            upperLimit = divisions*3-1;
-            s3Pointer = divisions*2;
-
-            if(s3Pointer <= upperLimit) {
-                stack[s3Pointer] = value;
-                s3Pointer++;
+            if(s3 <= s3_top) {
+                stack[s3] = value;
+                s3++;
             }
             else {
                 System.out.println("Stack 3 is too small!");
@@ -84,7 +76,9 @@ public class Stack<E> {
         System.out.println(s1.divisions);
 
         s1.push(2,55);
-        s1.push(1,69)
+        s1.push(1,69);
+
+        s1.printStack();
     }
 
 }
